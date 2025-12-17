@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Galeria</title>
+
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+
+            /* IMAGEM DE FUNDO */
+            background-image: url("fundo.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .galeria {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 15px;
+            padding: 20px;
+            background: rgba(0,0,0,0.4);
+            border-radius: 10px;
+        }
+
+        .galeria img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.6);
+        }
+
+        /* RESPONSIVO */
+        @media (max-width: 900px) {
+            .galeria {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="galeria">
+        <img src="img1.jpg" alt="Imagem 1">
+        <img src="img2.jpg" alt="Imagem 2">
+        <img src="img3.jpg" alt="Imagem 3">
+        <img src="img4.jpg" alt="Imagem 4">
+        <img src="img5.jpg" alt="Imagem 5">
+    </div>
+</body>
+</html>
