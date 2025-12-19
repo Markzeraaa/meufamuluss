@@ -1,63 +1,126 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
-    <title>Galeria</title>
+    <title>Farofa 2025, Memorial de radinho!</title>
 
     <style>
         body {
             margin: 0;
             min-height: 100vh;
 
-            /* IMAGEM DE FUNDO */
+            /* FUNDO DO SITE */
             background-image: url("fundo.jpg");
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
 
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
+            justify-content: center;
+
+            font-family: Arial, Helvetica, sans-serif;
+            overflow: hidden;
         }
 
+        h1 {
+            color: white;
+            font-size: 48px;
+            margin-bottom: 30px;
+            text-shadow: 0 0 15px black;
+        }
+
+        /* CONTAINER DO ÁLBUM */
+        .album {
+            background: rgba(100, 100, 100, 0.45);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 20px;
+            overflow: hidden;
+            width: 90%;
+        }
+
+        /* GALERIA ANIMADA */
         .galeria {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 15px;
-            padding: 20px;
-            background: rgba(0,0,0,0.4);
-            border-radius: 10px;
+            display: flex;
+            gap: 30px;
+            animation: mover 10s linear infinite;
         }
 
-        .galeria img {
-            width: 150px;
-            height: 150px;
+        /* CARTÃO DA FOTO */
+        .foto {
+            background: #ccc;
+            padding: 12px;
+            border-radius: 18px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            flex-shrink: 0;
+        }
+
+        .foto img {
+            width: 280px;
+            height: 380px;
             object-fit: cover;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.6);
+            border-radius: 12px;
+            display: block;
+        }
+
+        /* ANIMAÇÃO */
+        @keyframes mover {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(-250%);
+            }
         }
 
         /* RESPONSIVO */
         @media (max-width: 900px) {
-            .galeria {
-                grid-template-columns: repeat(2, 1fr);
+            h1 {
+                font-size: 32px;
+            }
+
+            .foto img {
+                width: 220px;
+                height: 300px;
             }
         }
     </style>
 </head>
 
 <body>
-    <div class="galeria">
-        <img src="img1.jpg" alt="Imagem 1">
-        <img src="img2.jpg" alt="Imagem 2">
-        <img src="img3.jpg" alt="Imagem 3">
-        <img src="img4.jpg" alt="Imagem 4">
-        <img src="img5.jpg" alt="Imagem 5">
-        <img src="img6.jpg" alt="Imagem 6">
-        <img src="img7.jpg" alt="Imagem 7">
-        <img src="img8.jpg" alt="Imagem 8">
-        <img src="img9.jpg" alt="Imagem 9">
-        <img src="img10.jpg" alt="Imagem 10">
+
+    <h1>Farofa 2025, Memorial de radinho</h1>
+
+    <div class="album">
+        <div class="galeria">
+            <div class="foto"><img src="img1.jpg"></div>
+            <div class="foto"><img src="img2.jpg"></div>
+            <div class="foto"><img src="img3.jpg"></div>
+            <div class="foto"><img src="img4.jpg"></div>
+            <div class="foto"><img src="img5.jpg"></div>
+            <div class="foto"><img src="img6.jpg"></div>
+            <div class="foto"><img src="img7.jpg"></div>
+            <div class="foto"><img src="radinho.gif"></div>
+            <div class="foto"><img src="img8.jpg"></div>
+            <div class="foto"><img src="img9.jpg"></div>
+            <div class="foto"><img src="img10.jpg"></div>
+            <div class="foto"><img src="img11.jpg"></div>
+            <div class="foto"><img src="img12.jpg"></div>
+            <div class="foto"><img src="img13.jpg"></div>
+            <div class="foto"><img src="img14.jpg"></div>
+            <div class="foto"><img src="img15.jpg"></div>
+            <div class="foto"><img src="img16.jpg"></div>
+            
+
+        
+        </div>
     </div>
+    </div>
+
 </body>
+
 </html>
